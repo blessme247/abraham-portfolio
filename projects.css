@@ -1,0 +1,187 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: hsl(0, 0%, 10%);
+    overflow-x: hidden;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  nav {
+      display: flex;
+      justify-content: space-between;
+    font-family: 'Open Sauce', sans-serif;
+    color: #AAAAAA;
+    margin-top: 1rem;
+  }
+  .mobile-nav-toggle {
+      display: none;
+  }
+  a {
+      text-decoration: none;
+  }
+  .logo-wrapper {
+      display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+  .logo-wrapper button {
+      display: none;
+  }
+  .logo-wrapper a {
+      color: #AAAAAA;
+  }
+  .nav-aside .navigation {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+  }
+  .navigation li a {
+    color: #AAAAAA;
+    margin-left: 2.5rem;
+    text-transform: uppercase;
+  }
+  .navigation li a:hover {
+    opacity: .75;
+  }
+  main {
+      margin-top: 5rem;
+      font-family: 'Open Sauce', sans-serif;
+  }
+  main .project-head {
+    color: #AAAAAA;
+    text-decoration: #AAAAAA underline;
+  }
+  .heading {
+      font-size: 1.2rem;
+      color: #AAAAAA;
+  }
+  .project-card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  .project-card {
+    width: 30%;
+    padding: 1%;
+    background-color: hsl(0, 0%, 20%);
+    border-radius: 5px;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+  }
+  .project-card img {
+    max-width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+  }
+  .project-text {
+    padding-left: 0.7rem;
+    padding-top: 0.7rem;
+    margin: 0.6rem 0;
+    line-height: 1.3;
+    color: #AAAAAA;
+  }
+  
+  .project-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .project-links-wrapper {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .project-links-wrapper a:first-child {
+    margin-left: 0.7rem;
+  }
+  .project-links-wrapper a {
+    text-decoration: none;
+    color: #AAAAAA;
+    border-radius: 5px;
+  }
+  .project-links-wrapper a:last-child {
+    margin-left: 1rem;
+  }
+  .project-links-wrapper a .fa-code-branch {
+      font-size: 12px;
+  }
+  .project-links-wrapper a .fa-code-eye {
+    font-size: 12px;
+  }
+  .project-links-wrapper a span {
+      font-size: 0.9rem;
+  }
+  .socials {
+    display: flex;
+    justify-content: flex-start;
+    transform: translateY(2rem);
+}
+ .socials a + a {
+    margin-left: .5rem;
+}
+
+  @media (max-width:650px){
+    .logo-wrapper .mobile-nav-toggle {
+         display: block;
+         background: url("images/bars-solid.svg");
+         border: none;
+         padding: .6rem;
+         position: absolute;
+         width: 1.3rem;
+         aspect-ratio: 1;
+         right: 2rem;
+         z-index: 9999;
+       }
+       .mobile-nav-toggle[aria-expanded="true"] {
+         background-image: url(images/icon-close.svg);
+         background-repeat: no-repeat;
+       }
+       .nav-aside .navigation {
+         flex-direction: column;
+         position: fixed;                          
+         inset: 0 0 0 50%;
+         padding: min(20vh, 10rem) .3rem;
+         font-size: 1.1rem;
+         background-color: hsl(0, 0%, 10%);
+         height: 100vh;
+         gap: 1.6rem;
+         transform: translateX(100%);
+         transition: transform 350ms ease-in;
+       }
+       .nav-aside .navigation[data-visible="true"] {
+         transform: translateX(0%);
+       }
+       .navigation li {
+         border-bottom: 1px solid #AAAAAA;
+       }
+       .navigation li a {
+         color: #AAAAAA;
+       }
+       main .project-head {
+           font-size: 1.3rem;
+       }
+       .heading {
+           font-size: 1rem;
+       }
+       .project-card-wrapper {
+           flex-direction: column;
+       }
+       .project-card {
+           width: 100%;
+       }
+       .project-card + .project-card {
+           margin-top: 1rem;
+       }
+       .socials {
+        margin-bottom: 3rem;
+    }
+    }

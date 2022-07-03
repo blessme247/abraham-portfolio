@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: hsl(0, 0%, 10%);
+    overflow-x: hidden;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+  font-family: 'Open Sauce', sans-serif;
+  color: #AAAAAA;
+  margin-top: 1rem;
+}
+.mobile-nav-toggle {
+    display: none;
+}
+a {
+    text-decoration: none;
+}
+.logo-wrapper {
+    display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+.logo-wrapper button {
+    display: none;
+}
+.logo-wrapper a {
+    color: #AAAAAA;
+}
+.nav-aside .navigation {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+.navigation li a {
+  color: #AAAAAA;
+  margin-left: 2.5rem;
+  text-transform: uppercase;
+}
+.navigation li a:hover {
+  opacity: .75;
+}
+main {
+    font-family: 'Open Sauce', sans-serif;
+    color: #AAAAAA;
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+}
+.heading {
+    display: flex;
+    flex-direction: column;
+}
+.heading p, .heading h3 {
+    text-align: justify;
+    margin: 0 auto;
+}
+.wave {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 2rem; */
+  }
+  .form-group {
+    width: 40%;
+  }
+  .form-group input {
+    width: 100%;
+    height: 40px;
+    margin: 0.5rem 0;
+    border: 1px solid #AAAAAA;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 18px;
+    background-color: hsl(0, 0%, 20%);
+  }
+  
+  .form-group textarea {
+    width: 100%;
+    display: block;
+    resize: none;
+    height: 11.75rem;
+    border: 1px solid #AAAAAA;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 18px;
+    margin-top: 0.5rem;
+    background-color: hsl(0, 0%, 20%);
+  }
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+  }
+  .form-group button {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    background-color: hsl(0, 0%, 40%);
+    color: white;
+    width: 40%;
+    margin-top: 1rem;
+    padding: 0.7rem 0.8rem;
+    border-radius: 5px;
+    border: none;
+  }
+  .socials {
+    display: flex;
+    justify-content: center;
+    transform: translateY(2rem);
+}
+ .socials a + a {
+    margin-left: .5rem;
+}
+
+@media (max-width:650px){
+    .logo-wrapper .mobile-nav-toggle {
+         display: block;
+         background: url("images/bars-solid.svg");
+         border: none;
+         padding: .6rem;
+         position: absolute;
+         width: 1.3rem;
+         aspect-ratio: 1;
+         right: 2rem;
+         z-index: 9999;
+       }
+       .mobile-nav-toggle[aria-expanded="true"] {
+         background-image: url(images/icon-close.svg);
+         background-repeat: no-repeat;
+       }
+       .nav-aside .navigation {
+         flex-direction: column;
+         position: fixed;                          
+         inset: 0 0 0 50%;
+         padding: min(20vh, 10rem) .3rem;
+         font-size: 1.1rem;
+         background-color: hsl(0, 0%, 10%);
+         height: 100vh;
+         gap: 1.6rem;
+         transform: translateX(100%);
+         transition: transform 350ms ease-in;
+       }
+       .nav-aside .navigation[data-visible="true"] {
+         transform: translateX(0%);
+       }
+       .navigation li {
+         border-bottom: 1px solid #AAAAAA;
+       }
+       .navigation li a {
+         color: #AAAAAA;
+       }
+       .heading h3 {
+           margin: 0;
+       }
+       .form-group {
+           width: 100%;
+       }
+    }

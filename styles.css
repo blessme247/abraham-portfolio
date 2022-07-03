@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: hsl(0, 0%, 10%);
+    overflow-x: hidden;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  main {
+      height: 100vh;
+  }
+  nav {
+      display: flex;
+      justify-content: space-between;
+    font-family: 'Open Sauce', sans-serif;
+    color: #AAAAAA;
+    margin-top: 1rem;
+  }
+  .mobile-nav-toggle {
+      display: none;
+  }
+  a {
+      text-decoration: none;
+  }
+  .logo-wrapper {
+      display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+  .logo-wrapper button {
+      display: none;
+  }
+  .logo-wrapper a {
+      color: #AAAAAA;
+  }
+  .nav-aside .navigation {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+  }
+  .navigation li a {
+    color: #AAAAAA;
+    margin-left: 2.5rem;
+    text-transform: uppercase;
+  }
+  .navigation li a:hover {
+   opacity: .75;
+  }
+  .hero-section {
+    font-weight: bold;
+  }
+  .hero-section hr {
+    border: none;
+    background-color: #AAAAAA;
+    height: 1.5px;
+  }
+  .hero-section .top-divider {
+      transform: translateY(4rem);
+  }
+  .hero-section .bottom-divider {
+      margin-top: 1.8rem ;
+  }
+  .hero-section .name-paragraph {
+    text-transform: uppercase;
+  }
+.hero-section .first-paragraph {
+    margin: 6rem auto 1rem auto;
+    text-align: center;
+    color: #AAAAAA;
+}
+.wave {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
+  }
+.hero-section p {
+    font-family: 'Open Sauce', sans-serif;
+    color: #AAAAAA;
+    text-align: center;
+    font-size: 2rem;
+}
+.hero-section .track {
+    font-family: 'Bebas Neue',  sans-serif;
+    color: #AAAAAA;
+    text-align: center;
+    font-size: 4rem;
+}
+.hero-section .call-to-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+ .call-to-action form button {
+     background-color: transparent;
+     color: #AAAAAA;
+     border-color: transparent;
+     border: 2px solid #AAAAAA;
+     padding: .5rem;
+     border-radius: 5px;
+     text-transform: uppercase;
+     font-family: 'Open Sauce', sans-serif;
+ }
+ .call-to-action a {
+    background-color: transparent;
+    color: #AAAAAA;
+    border-color: transparent;
+    border: 2px solid #AAAAAA;
+    padding: .45rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-left: .3rem;
+    font-family: 'Open Sauce', sans-serif;
+ }
+ .call-to-action a svg {
+     transform: translateY(.2rem);
+ }
+ .hero-section .socials {
+     display: flex;
+     justify-content: flex-end;
+     transform: translateY(2rem);
+ }
+ .hero-section .socials a + a {
+     margin-left: .5rem;
+ }
+ @media (max-width:650px){
+   .logo-wrapper .mobile-nav-toggle {
+        display: block;
+        background: url("images/bars-solid.svg");
+        border: none;
+        padding: .6rem;
+        position: absolute;
+        width: 1.3rem;
+        aspect-ratio: 1;
+        right: 2rem;
+        z-index: 9999;
+      }
+      .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url(images/icon-close.svg);
+        background-repeat: no-repeat;
+      }
+      .nav-aside .navigation {
+        flex-direction: column;
+        position: fixed;                          
+        inset: 0 0 0 50%;
+        padding: min(20vh, 10rem) .3rem;
+        font-size: 1.1rem;
+        background-color: hsl(0, 0%, 10%);
+        height: 100vh;
+        gap: 1.6rem;
+        transform: translateX(100%);
+        transition: transform 350ms ease-in;
+      }
+      .nav-aside .navigation[data-visible="true"] {
+        transform: translateX(0%);
+      }
+      .navigation li {
+        border-bottom: 1px solid #AAAAAA;
+      }
+      .navigation li a {
+        color: #AAAAAA;
+      }
+      .hero-section p {
+          font-size: 1.2rem;
+      }
+      .hero-section .track {
+          font-size: 2rem;
+      }
+      .hero-section .top-divider {
+          margin: 0;
+          width: 100%;
+      }
+      .hero-section .bottom-divider {
+          width: 100%;
+          margin-left: 0;
+      }
+ }
