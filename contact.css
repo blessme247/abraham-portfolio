@@ -87,7 +87,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin-bottom: 2rem; */
   }
   .form-group {
     width: 40%;
@@ -137,7 +136,7 @@ main {
     transform: translateY(2rem);
 }
  .socials a + a {
-    margin-left: .5rem;
+    margin-left: .7rem;
 }
 
 @media (max-width:650px){

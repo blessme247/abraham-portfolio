@@ -101,11 +101,11 @@ opacity: .75;
 }
  .text-section .socials {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     transform: translateY(2rem);
 }
  .socials a + a {
-    margin-left: .5rem;
+    margin-left: .7rem;
 }
 @media (max-width:650px){
     .logo-wrapper .mobile-nav-toggle {
