@@ -198,6 +198,9 @@ opacity: .75;
       .image-section .image {
           height: 40vh;
       }
+      .meetup-container {
+          margin-top: 5rem;
+      }
       .socials {
           margin-bottom: 3rem;
       }
