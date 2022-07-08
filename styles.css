@@ -12,8 +12,17 @@ body {
     max-width: 1200px;
     margin: 0 auto;
   }
+  header {
+    background-color: hsl(0, 0%, 20%);
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+  }
   main {
       height: 100vh;
+      margin-top: 4rem;
   }
   nav {
       display: flex;

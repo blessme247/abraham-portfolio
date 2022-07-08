@@ -12,6 +12,14 @@ body {
     max-width: 1200px;
     margin: 0 auto;
   }
+  header {
+    background-color: hsl(0, 0%, 20%);
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+  }
   nav {
     display: flex;
     justify-content: space-between;
@@ -53,7 +61,7 @@ a {
 main {
     font-family: 'Open Sauce', sans-serif;
     color: #AAAAAA;
-    margin-top: 6rem;
+    margin-top: 9rem;
     margin-bottom: 5rem;
 }
 .heading {
