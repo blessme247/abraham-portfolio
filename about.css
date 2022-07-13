@@ -7,6 +7,12 @@ body {
     background-color: hsl(0, 0%, 10%);
     overflow-x: hidden;
 }
+/*==================== Utility CLASSES ====================*/
+.section {
+    padding: 2rem 0 2rem;
+  }
+
+  
 .container {
     width: 90%;
     max-width: 1200px;
@@ -97,12 +103,14 @@ opacity: .75;
 }
 .hero-section .image-section {
     width: 30%;
+    height: 300px;
 }
  
 .image-section .image {
     display: block;
     width: 90% ;
-    height: 55vh;
+    /* height: 55vh; */
+    height: 100%;
     object-fit: cover;
     object-position: center;
     border-radius: 10px;
@@ -153,7 +161,7 @@ opacity: .75;
     
     }
 }
-@media (max-width:750px){
+@media (max-width:780px){
     .logo-wrapper .mobile-nav-toggle {
         display: block;
         background: url("images/bars-solid.svg");
@@ -208,12 +216,30 @@ opacity: .75;
       .image-section .image {
           height: 40vh;
       }
-      /* .meetup-container {
-          margin-top: 21rem;
-      } */
       .socials {
           margin-bottom: 3rem;
       }
+ }
+ @media (min-width:781px) and (max-width: 980px) {
+    .hero-section {
+        flex-direction: column;
+    }
+    .hero-section .text-section {
+        width: 100%;
+        order: 2;
+        font-size: 1rem;
+        margin-top: 4rem;
+    }
+    .hero-section .image-section {
+        width: 100%;
+        order: 1;
+        margin-top: 2.5rem;
+        margin-right: 3rem;
+    }
+    .image-section .image {
+        height: 340px;
+    }
+
  }
  @media  (min-width:300px) and (max-width: 599px) {
     .meetup-images {
